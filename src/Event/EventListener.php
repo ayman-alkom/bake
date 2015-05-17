@@ -32,7 +32,7 @@ abstract class EventListener implements EventListenerInterface
      *
      * @return void
      */
-    public function __invoke()
+    public function execute()
     {
         $methods = array_values($this->implementedEvents());
         foreach ($methods as $method) {
