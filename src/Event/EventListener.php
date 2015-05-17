@@ -1,7 +1,7 @@
 <?php
 namespace Bake\Event;
 
-use Cake\Event\Event as CakeEvent;
+use Cake\Event\Event;
 use Cake\Event\EventListenerInterface;
 use Cake\Event\EventManagerTrait;
 
@@ -10,7 +10,7 @@ abstract class EventListener implements EventListenerInterface
     use EventManagerTrait;
 
     /**
-     * The CakeEvent attached to this class
+     * The Event attached to this class
      *
      * @var \Cake\Event\Event $event Event instance.
      */
@@ -21,7 +21,7 @@ abstract class EventListener implements EventListenerInterface
      *
      * @param \Cake\Event\Event $event Event instance.
      */
-    public function __construct(CakeEvent $event)
+    public function __construct(Event $event)
     {
         $this->event = $event;
         $this->eventManager()->attach($this);
